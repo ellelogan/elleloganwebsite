@@ -83,6 +83,7 @@
             justify-content: center;
             position: relative;
             margin-top: 100px; /* Adjusted for taller header */
+            overflow: hidden; /* Prevents horizontal scrollbar from negative margin */
         }
 
         #hero::before {
@@ -100,14 +101,15 @@
             z-index: 1;
             max-width: 800px;
             width: 100%;
-            text-align: center; /* Align content to the center */
+            text-align: left; /* Align content to the left */
         }
 
         .hero-logo {
             max-width: 400px; /* SMALLER wordmark in hero */
             width: 100%;
             height: auto;
-            margin-top: 150px; /* Pushes the wordmark further down */
+            margin-top: 500px; /* Pushes the wordmark significantly further down */
+            margin-left: -100px; /* Pulls the wordmark far to the left */
             margin-bottom: 25px;
             opacity: 0.6; /* Slightly less translucent */
         }
@@ -118,8 +120,6 @@
             text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
             font-weight: 300;
             max-width: 500px; /* Constrain text width for readability */
-            margin-left: auto;
-            margin-right: auto;
         }
 
         .btn {
@@ -337,9 +337,9 @@
                 padding: 150px 20px 80px;
                 min-height: 500px;
             }
-
+            
             .hero-logo {
-                max-width: 350px;
+                margin-left: -50px; /* Less extreme negative margin on smaller screens */
             }
 
             #hero p {
@@ -377,6 +377,7 @@
 
         @media (max-width: 480px) {
             .hero-logo {
+                margin-left: -20px; /* Even less negative margin */
                 max-width: 280px;
             }
 
