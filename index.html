@@ -76,7 +76,6 @@
         #hero {
             background: url('https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg') no-repeat center center/cover;
             color: #fff;
-            text-align: center;
             padding: 180px 20px 120px;
             min-height: 700px;
             display: flex;
@@ -93,13 +92,15 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Overlay for text readability */
+            background: rgba(0, 0, 0, 0.35); /* Lighter overlay for less fade */
         }
 
         #hero .hero-content {
             position: relative;
             z-index: 1;
             max-width: 800px;
+            width: 100%;
+            text-align: left; /* Align content to the left */
         }
 
         .hero-logo {
@@ -115,6 +116,7 @@
             margin-bottom: 40px;
             text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
             font-weight: 300;
+            max-width: 500px; /* Constrain text width for readability */
         }
 
         .btn {
