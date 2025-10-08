@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L. Logan's Services - Embodied Voice, Vocal Lessons, Voice as Medicine, Photography</title>
+    <title>Embodied Voice & Transformational Photography</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
@@ -79,7 +79,7 @@
 
         /* Hero Section */
         #hero {
-            background: url('https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg') no-repeat center center/cover;
+            background: url('https://cdn.zenfolio.com/img/s/v-12/u662698745-o880901765-111.png') no-repeat center center/cover;
             color: #fff;
             text-align: center;
             padding: 180px 20px 120px; /* Adjust top padding for fixed header */
@@ -174,10 +174,13 @@
         /* Services Grid */
         #services .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
             margin-top: 50px;
             text-align: left;
+            max-width: 800px; /* Constrain grid for 2 items */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .service-item {
@@ -200,11 +203,21 @@
             margin-bottom: 15px;
             color: #333;
         }
-
+        
         .service-item p {
             color: #666;
             font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .service-item ul {
+            list-style-position: inside;
+            color: #666;
             margin-bottom: 20px;
+        }
+        
+        .service-item li {
+            margin-bottom: 8px;
         }
 
         .service-item .learn-more {
@@ -284,30 +297,6 @@
             font-size: 1.4rem;
             margin-bottom: 40px;
             font-weight: 300;
-        }
-
-        #contact .contact-info {
-            margin-top: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        #contact .contact-item {
-            text-align: center;
-            font-size: 1.1rem;
-        }
-
-        #contact .contact-item a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-
-        #contact .contact-item a:hover {
-            color: #FFDAB9; /* Lighter accent */
         }
 
         /* Footer */
@@ -413,12 +402,12 @@
 <body>
     <header>
         <div class="container">
-            <h1><a href="#hero">L. Logan</a></h1>
+            <h1><a href="#hero">Embodied Voice & Photography</a></h1>
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Connect</a></li>
+                    <li><a href="#contact">Book a Session</a></li>
                 </ul>
             </nav>
         </div>
@@ -439,23 +428,17 @@
                 <div class="service-grid">
                     <div class="service-item">
                         <h4>Embodied Voice Institute</h4>
-                        <p>Deep dive into foundational principles, techniques, and practices to fully embody your voice and presence.</p>
-                        <a href="#contact" class="learn-more">Learn More &rarr;</a>
-                    </div>
-                    <div class="service-item">
-                        <h4>Vocal Lessons</h4>
-                        <p>Personalized sessions to develop vocal technique, expand range, and unlock your unique singing or speaking voice.</p>
-                        <a href="#contact" class="learn-more">Book a Lesson &rarr;</a>
-                    </div>
-                    <div class="service-item">
-                        <h4>Voice as Medicine Sessions</h4>
-                        <p>Harness the therapeutic power of your voice for healing, emotional release, and energetic alignment.</p>
-                        <a href="#contact" class="learn-more">Discover Healing &rarr;</a>
+                        <p>Deep dive into foundational principles to fully embody your voice and presence. Offerings include:</p>
+                        <ul>
+                            <li>Personalized Vocal Lessons</li>
+                            <li>Voice as Medicine Sessions</li>
+                        </ul>
+                        <a href="#contact" class="learn-more">Book an Intro Call &rarr;</a>
                     </div>
                     <div class="service-item">
                         <h4>Transformational Photography</h4>
                         <p>Capture your true self with evocative imagery that reflects your inner journey and authentic spirit.</p>
-                        <a href="#contact" class="learn-more">View Portfolio &rarr;</a>
+                        <a href="https://ellelogan.zenfolio.com/" target="_blank" rel="noopener noreferrer" class="learn-more">View Portfolio &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -463,14 +446,16 @@
 
         <section id="about">
             <div class="container">
-                <h3>About L. Logan</h3>
+                <h3>About Me</h3>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg" alt="L. Logan - Transformational Guide">
+                        <!-- This image URL is a placeholder from a previous request. -->
+                        <!-- You may want to use a different, more personal headshot here. -->
+                        <img src="https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg" alt="A woman in a natural setting, representing the guide for these services.">
                     </div>
                     <div class="about-text">
                         <h4>Empowering Voice, Illuminating Presence.</h4>
-                        <p>L. Logan is a dedicated guide specializing in vocal empowerment, holistic well-being, and authentic self-expression. With a passion for helping individuals uncover their inherent power, L. Logan offers a unique blend of vocal instruction, therapeutic voice work, and transformational photography.</p>
+                        <p>I am a dedicated guide specializing in vocal empowerment, holistic well-being, and authentic self-expression. With a passion for helping individuals uncover their inherent power, I offer a unique blend of vocal instruction, therapeutic voice work, and transformational photography.</p>
                         <p>My journey is about fostering a deep connection to your inner wisdom, allowing you to articulate your truth and live vibrantly. Whether through the resonance of your voice or the captured beauty of your essence, I'm here to support your path to profound self-discovery.</p>
                         <p>I believe that when we truly inhabit our voice and presence, we unlock extraordinary possibilities. Let's begin this journey together.</p>
                     </div>
@@ -480,25 +465,16 @@
 
         <section id="contact">
             <div class="container">
-                <h3>Ready to Transform?</h3>
-                <p>Reach out to schedule a consultation or learn more about how I can support your unique journey.</p>
-                <a href="mailto:your_email@example.com" class="btn">Send an Email</a>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                    </div>
-                    <!-- Add social media links if desired -->
-                </div>
+                <h3>Ready to Begin?</h3>
+                <p>Schedule your complimentary introductory call to explore how we can work together.</p>
+                <a href="https://calendly.com/iamvoiced/30min-intro?back=1&month=2025-10" target="_blank" rel="noopener noreferrer" class="btn">Book Your Introductory Call</a>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 L. Logan. All rights reserved.</p>
+            <p>&copy; 2025 Your Name Here. All rights reserved.</p>
         </div>
     </footer>
 </body>
