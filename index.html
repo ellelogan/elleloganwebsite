@@ -32,7 +32,7 @@
         /* Header & Navigation */
         header {
             background: rgba(255, 255, 255, 0.95);
-            padding: 0.75rem 0; /* Adjusted padding for logo */
+            padding: 0.5rem 0; /* Adjusted padding for larger logo */
             position: fixed;
             width: 100%;
             top: 0;
@@ -47,7 +47,7 @@
         }
 
         header .header-logo {
-            height: 45px; /* Control the logo size */
+            height: 65px; /* Larger logo in header */
             width: auto;
             vertical-align: middle;
         }
@@ -77,13 +77,13 @@
             background: url('https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
-            padding: 180px 20px 120px; /* Adjust top padding for fixed header */
+            padding: 180px 20px 120px;
             min-height: 700px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            margin-top: 65px; /* Adjust for fixed header */
+            margin-top: 85px; /* Adjusted for taller header */
         }
 
         #hero::before {
@@ -93,7 +93,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.45); /* Darker overlay for text readability */
+            background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for better contrast */
         }
 
         #hero .hero-content {
@@ -103,11 +103,12 @@
         }
 
         .hero-logo {
-            max-width: 500px;
+            max-width: 400px; /* Smaller logo in hero */
             width: 100%;
             height: auto;
             margin-bottom: 25px;
-            filter: invert(1) drop-shadow(1px 1px 3px rgba(0,0,0,0.5)); /* Inverts color to white and adds subtle shadow */
+            /* This filter chain converts the black logo to a gold color */
+            filter: grayscale(1) brightness(3) sepia(1) hue-rotate(-50deg) saturate(5);
         }
 
         #hero p {
@@ -315,6 +316,7 @@
             }
             
             header .header-logo {
+                height: 55px;
                 margin-bottom: 10px;
             }
 
@@ -333,7 +335,7 @@
             }
 
             .hero-logo {
-                max-width: 400px;
+                max-width: 350px;
             }
 
             #hero p {
@@ -388,7 +390,7 @@
             }
             
             header .header-logo {
-                height: 35px;
+                height: 50px;
             }
 
             nav ul li {
