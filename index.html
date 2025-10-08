@@ -93,7 +93,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for better contrast */
+            background: rgba(0, 0, 0, 0.5); /* Overlay for text readability */
         }
 
         #hero .hero-content {
@@ -107,8 +107,7 @@
             width: 100%;
             height: auto;
             margin-bottom: 25px;
-            /* This complex CSS filter converts the black wordmark to a rich GOLD color */
-            filter: grayscale(1) brightness(1.5) sepia(1) hue-rotate(-50deg) saturate(6);
+            opacity: 0.8; /* Makes the wordmark translucent */
         }
 
         #hero p {
@@ -156,4 +155,327 @@
             display: inline-block;
         }
 
-        h3::after
+        h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #8B4513;
+        }
+
+        /* Services Grid */
+        #services .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            text-align: left;
+            max-width: 800px; /* Constrain grid for 2 items */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #8B4513;
+        }
+
+        .service-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .service-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .service-item p {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .service-item ul {
+            list-style-position: inside;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .service-item li {
+            margin-bottom: 8px;
+        }
+
+        .service-item .learn-more {
+            color: #8B4513;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .service-item .learn-more:hover {
+            color: #A0522D;
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        #about .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: left;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        #about .about-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center; /* Center image on smaller screens */
+        }
+
+        #about .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            object-fit: cover;
+            width: 400px; /* Fixed width for consistency, adjust if needed */
+            height: 500px; /* Fixed height for consistency */
+        }
+
+        #about .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        #about .about-text h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #about .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+
+        /* Call to Action / Contact */
+        #contact {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 100px 20px;
+        }
+
+        #contact h3 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        #contact h3::after {
+            background-color: #fff;
+        }
+
+        #contact p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #eee;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            header .header-logo {
+                height: 65px;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                margin-top: 0;
+                padding-left: 0;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            #hero {
+                padding: 150px 20px 80px;
+                min-height: 500px;
+            }
+
+            .hero-logo {
+                max-width: 350px;
+            }
+
+            #hero p {
+                font-size: 1.1rem;
+            }
+
+            h3 {
+                font-size: 2.2rem;
+            }
+
+            #about .about-content {
+                flex-direction: column;
+            }
+
+            #about .about-image,
+            #about .about-text {
+                min-width: unset;
+                width: 100%;
+            }
+
+            #about .about-image img {
+                width: 100%;
+                height: auto;
+                max-width: 400px; /* Constrain image size on smaller screens */
+            }
+
+            .service-item {
+                padding: 25px;
+            }
+
+            #contact p {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-logo {
+                max-width: 280px;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            h3 {
+                font-size: 1.8rem;
+            }
+            
+            header .header-logo {
+                height: 50px;
+            }
+
+            nav ul li {
+                margin: 0 7px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="#hero">
+                <img src="https://cdn.zenfolio.com/img/s/v-12/u662698745-o880901765-111.png" alt="Elle Logan Wordmark" class="header-logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Book a Call</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <img src="https://cdn.zenfolio.com/img/s/v-12/u662698745-o880901765-111.png" alt="Embodied Voice & Photography" class="hero-logo">
+                <p>Guiding you through the power of sound, presence, and authentic expression.</p>
+                <a href="#services" class="btn">Explore Services</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h3>My Offerings</h3>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h4>Embodied Voice Institute</h4>
+                        <p>Deep dive into foundational principles to fully embody your voice and presence. Offerings include:</p>
+                        <ul>
+                            <li>Personalized Vocal Lessons</li>
+                            <li>Voice as Medicine Sessions</li>
+                        </ul>
+                        <a href="#contact" class="learn-more">Book an Intro Call &rarr;</a>
+                    </div>
+                    <div class="service-item">
+                        <h4>Transformational Photography</h4>
+                        <p>Capture your true self with evocative imagery that reflects your inner journey and authentic spirit.</p>
+                        <a href="https://ellelogan.zenfolio.com/" class="learn-more" target="_blank" rel="noopener noreferrer">View Portfolio &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h3>About Elle</h3>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg" alt="Elle Logan - Transformational Guide">
+                    </div>
+                    <div class="about-text">
+                        <h4>Empowering Voice, Illuminating Presence.</h4>
+                        <p>Elle Logan is a dedicated guide specializing in vocal empowerment, holistic well-being, and authentic self-expression. With a passion for helping individuals uncover their inherent power, Elle offers a unique blend of vocal instruction, therapeutic voice work, and transformational photography.</p>
+                        <p>My journey is about fostering a deep connection to your inner wisdom, allowing you to articulate your truth and live vibrantly. Whether through the resonance of your voice or the captured beauty of your essence, I'm here to support your path to profound self-discovery.</p>
+                        <p>I believe that when we truly inhabit our voice and presence, we unlock extraordinary possibilities. Let's begin this journey together.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h3>Ready to Begin?</h3>
+                <p>Schedule your complimentary introductory call to explore how we can work together.</p>
+                <a href="https://calendly.com/iamvoiced/30min-intro?back=1&month=2025-10" target="_blank" rel="noopener noreferrer" class="btn">Book Your Introductory Call</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Elle Logan. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
