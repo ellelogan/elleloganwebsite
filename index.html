@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name Photography - Capturing Your Moments</title>
+    <title>L. Logan's Services - Embodied Voice, Vocal Lessons, Voice as Medicine, Photography</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        
         /* Basic Reset & Body Styles */
         * {
             margin: 0;
@@ -14,29 +16,28 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Raleway', sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #f4f4f4;
+            background-color: #f8f8f8;
             scroll-behavior: smooth;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
 
         /* Header & Navigation */
         header {
-            background: #fff;
-            color: #333;
+            background: rgba(255, 255, 255, 0.95);
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
         header .container {
@@ -46,6 +47,7 @@
         }
 
         header h1 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             margin: 0;
         }
@@ -61,32 +63,32 @@
 
         nav ul li {
             display: inline;
-            margin-left: 20px;
+            margin-left: 25px;
         }
 
         nav ul li a {
             color: #555;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
             transition: color 0.3s ease;
         }
 
         nav ul li a:hover {
-            color: #007bff; /* Accent color */
+            color: #8B4513; /* Earthy/elegant accent */
         }
 
         /* Hero Section */
         #hero {
-            background: url('https://via.placeholder.com/1920x1080/007bff/ffffff?text=Your+Stunning+Hero+Image') no-repeat center center/cover;
+            background: url('https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg') no-repeat center center/cover;
             color: #fff;
             text-align: center;
-            padding: 150px 20px;
-            min-height: 600px;
+            padding: 180px 20px 120px; /* Adjust top padding for fixed header */
+            min-height: 700px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            margin-top: 60px; /* Adjust for fixed header */
+            margin-top: 65px; /* Adjust for fixed header */
         }
 
         #hero::before {
@@ -96,120 +98,126 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+            background: rgba(0, 0, 0, 0.45); /* Darker overlay for text readability */
         }
 
         #hero .hero-content {
             position: relative;
             z-index: 1;
+            max-width: 800px;
         }
 
         #hero h2 {
-            font-size: 3.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+            line-height: 1.1;
         }
 
         #hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            font-size: 1.35rem;
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            font-weight: 300;
         }
 
         .btn {
             display: inline-block;
-            background: #007bff; /* Accent color */
+            background: #8B4513; /* Earthy/elegant accent */
             color: #fff;
-            padding: 12px 25px;
+            padding: 14px 30px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 30px; /* More rounded for elegance */
             font-size: 1.1rem;
-            transition: background 0.3s ease;
+            font-weight: 500;
+            transition: background 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .btn:hover {
-            background: #0056b3;
+            background: #A0522D; /* Slightly lighter on hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25);
         }
 
         /* Section Styling */
         section {
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
         }
 
         section:nth-of-type(even) {
-            background-color: #e9e9e9;
+            background-color: #f0f0f0;
         }
 
         h3 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
             color: #333;
+            position: relative;
+            display: inline-block;
         }
 
-        /* Services */
+        h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #8B4513;
+        }
+
+        /* Services Grid */
         #services .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            gap: 40px;
+            margin-top: 50px;
+            text-align: left;
         }
 
         .service-item {
             background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: left;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 5px solid #8B4513;
         }
 
         .service-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
-        }
-
-        .service-item i {
-            font-size: 2.5rem;
-            color: #007bff;
-            margin-bottom: 15px;
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
         }
 
         .service-item h4 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
             color: #333;
         }
 
         .service-item p {
             color: #666;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .service-item .learn-more {
+            color: #8B4513;
+            text-decoration: none;
+            font-weight: 500;
             font-size: 0.95rem;
+            transition: color 0.3s ease;
         }
 
-        /* Gallery */
-        #gallery .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 40px;
-        }
-
-        #gallery .gallery-item {
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        #gallery .gallery-item img {
-            width: 100%;
-            height: 250px; /* Fixed height for consistency */
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        #gallery .gallery-item img:hover {
-            transform: scale(1.05);
+        .service-item .learn-more:hover {
+            color: #A0522D;
+            text-decoration: underline;
         }
 
         /* About Section */
@@ -218,19 +226,23 @@
             flex-wrap: wrap;
             align-items: center;
             text-align: left;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 50px;
+            margin-top: 50px;
         }
 
         #about .about-image {
             flex: 1;
             min-width: 300px;
+            text-align: center; /* Center image on smaller screens */
         }
 
         #about .about-image img {
             max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            object-fit: cover;
+            width: 400px; /* Fixed width for consistency, adjust if needed */
+            height: 500px; /* Fixed height for consistency */
         }
 
         #about .about-text {
@@ -239,96 +251,77 @@
         }
 
         #about .about-text h4 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: #333;
         }
 
         #about .about-text p {
             font-size: 1.1rem;
             color: #666;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            line-height: 1.7;
         }
 
-        /* Contact Section */
-        #contact .contact-form {
-            max-width: 600px;
-            margin: 40px auto 0;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-            text-align: left;
-        }
-
-        #contact .contact-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #555;
-        }
-
-        #contact .contact-form input[type="text"],
-        #contact .contact-form input[type="email"],
-        #contact .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        #contact .contact-form textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        #contact .contact-form input[type="submit"] {
-            width: auto;
-            display: block;
-            margin-left: auto; /* Push button to the right */
-            background: #007bff;
+        /* Call to Action / Contact */
+        #contact {
+            background-color: #8B4513;
             color: #fff;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1rem;
-            transition: background 0.3s ease;
+            padding: 100px 20px;
         }
 
-        #contact .contact-form input[type="submit"]:hover {
-            background: #0056b3;
+        #contact h3 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        #contact h3::after {
+            background-color: #fff;
+        }
+
+        #contact p {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        #contact .contact-info {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        #contact .contact-item {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        #contact .contact-item a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 500;
+        }
+
+        #contact .contact-item a:hover {
+            color: #FFDAB9; /* Lighter accent */
         }
 
         /* Footer */
         footer {
-            background: #333;
-            color: #fff;
+            background: #222;
+            color: #eee;
             text-align: center;
             padding: 30px 0;
-            margin-top: 50px;
+            font-size: 0.9rem;
         }
 
         footer p {
             margin: 0;
-            font-size: 0.9rem;
         }
-
-        footer .social-links a {
-            color: #fff;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        footer .social-links a:hover {
-            color: #007bff;
-        }
-
-        /* Font Awesome for icons */
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -346,16 +339,21 @@
                 margin: 0 10px;
             }
 
+            #hero {
+                padding: 150px 20px 80px;
+                min-height: 500px;
+            }
+
             #hero h2 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             #hero p {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
 
             h3 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             #about .about-content {
@@ -367,15 +365,25 @@
                 min-width: unset;
                 width: 100%;
             }
+
+            #about .about-image img {
+                width: 100%;
+                height: auto;
+                max-width: 400px; /* Constrain image size on smaller screens */
+            }
+
+            .service-item {
+                padding: 25px;
+            }
+
+            #contact p {
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 480px) {
-            #hero {
-                padding: 100px 20px;
-            }
-
             #hero h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             #hero p {
@@ -387,12 +395,17 @@
                 font-size: 1rem;
             }
 
-            nav ul li {
-                margin: 0 5px;
+            h3 {
+                font-size: 1.8rem;
             }
 
-            section {
-                padding: 60px 0;
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul li {
+                margin: 0 7px;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -400,13 +413,12 @@
 <body>
     <header>
         <div class="container">
-            <h1><a href="#hero">Your Name Photography</a></h1>
+            <h1><a href="#hero">L. Logan</a></h1>
             <nav>
                 <ul>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact">Connect</a></li>
                 </ul>
             </nav>
         </div>
@@ -415,66 +427,52 @@
     <main>
         <section id="hero">
             <div class="hero-content">
-                <h2>Capturing Your Moments, Beautifully.</h2>
-                <p>Specializing in portraits, events, and personal brand photography.</p>
-                <a href="#contact" class="btn">Book A Session</a>
+                <h2>Awaken Your Voice, Capture Your Essence.</h2>
+                <p>Guiding you through the power of sound, presence, and authentic expression.</p>
+                <a href="#services" class="btn">Explore Services</a>
             </div>
         </section>
 
         <section id="services">
             <div class="container">
-                <h3>Our Photography Services</h3>
+                <h3>My Offerings</h3>
                 <div class="service-grid">
                     <div class="service-item">
-                        <i class="fas fa-camera-retro"></i>
-                        <h4>Portraits</h4>
-                        <p>Beautiful individual and family portraits that truly reflect your personality and relationships.</p>
+                        <h4>Embodied Voice Institute</h4>
+                        <p>Deep dive into foundational principles, techniques, and practices to fully embody your voice and presence.</p>
+                        <a href="#contact" class="learn-more">Learn More &rarr;</a>
                     </div>
                     <div class="service-item">
-                        <i class="fas fa-birthday-cake"></i>
-                        <h4>Events</h4>
-                        <p>Documenting your special occasions – birthdays, anniversaries, graduations, and corporate gatherings.</p>
+                        <h4>Vocal Lessons</h4>
+                        <p>Personalized sessions to develop vocal technique, expand range, and unlock your unique singing or speaking voice.</p>
+                        <a href="#contact" class="learn-more">Book a Lesson &rarr;</a>
                     </div>
                     <div class="service-item">
-                        <i class="fas fa-briefcase"></i>
-                        <h4>Personal Branding</h4>
-                        <p>Professional headshots and lifestyle images to enhance your online presence and business.</p>
+                        <h4>Voice as Medicine Sessions</h4>
+                        <p>Harness the therapeutic power of your voice for healing, emotional release, and energetic alignment.</p>
+                        <a href="#contact" class="learn-more">Discover Healing &rarr;</a>
                     </div>
                     <div class="service-item">
-                        <i class="fas fa-heart"></i>
-                        <h4>Engagements & Couples</h4>
-                        <p>Capturing the love and connection between partners in a relaxed and authentic way.</p>
+                        <h4>Transformational Photography</h4>
+                        <p>Capture your true self with evocative imagery that reflects your inner journey and authentic spirit.</p>
+                        <a href="#contact" class="learn-more">View Portfolio &rarr;</a>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery">
-            <div class="container">
-                <h3>Our Work</h3>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/FF5733/FFFFFF?text=Portrait+1" alt="Portrait Photography"></div>
-                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/33FF57/FFFFFF?text=Event+Shot+1" alt="Event Photography"></div>
-                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/3357FF/FFFFFF?text=Branding+Shot+1" alt="Branding Photography"></div>
-                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/FFFF33/333333?text=Couple+Shot+1" alt="Couple Photography"></div>
-                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/FF33FF/FFFFFF?text=Portrait+2" alt="Portrait Photography"></div>
-                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/33FFFF/333333?text=Event+Shot+2" alt="Event Photography"></div>
                 </div>
             </div>
         </section>
 
         <section id="about">
             <div class="container">
-                <h3>About Me</h3>
+                <h3>About L. Logan</h3>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="https://via.placeholder.com/500x600/777777/FFFFFF?text=Your+Headshot" alt="Your Name - Photographer">
+                        <img src="https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg" alt="L. Logan - Transformational Guide">
                     </div>
                     <div class="about-text">
-                        <h4>Hi, I'm [Your Name]!</h4>
-                        <p>I'm a passionate photographer dedicated to freezing your most cherished moments in time. Based in [Your City/Region], I believe every person and every event has a unique story waiting to be told through stunning visuals.</p>
-                        <p>My approach is relaxed and natural, focusing on capturing genuine emotions and candid interactions. Whether it's the joy of a family gathering, the celebration of a milestone, or crafting the perfect image for your brand, I strive to create photographs that you'll treasure for a lifetime.</p>
-                        <p>Let's create something beautiful together!</p>
+                        <h4>Empowering Voice, Illuminating Presence.</h4>
+                        <p>L. Logan is a dedicated guide specializing in vocal empowerment, holistic well-being, and authentic self-expression. With a passion for helping individuals uncover their inherent power, L. Logan offers a unique blend of vocal instruction, therapeutic voice work, and transformational photography.</p>
+                        <p>My journey is about fostering a deep connection to your inner wisdom, allowing you to articulate your truth and live vibrantly. Whether through the resonance of your voice or the captured beauty of your essence, I'm here to support your path to profound self-discovery.</p>
+                        <p>I believe that when we truly inhabit our voice and presence, we unlock extraordinary possibilities. Let's begin this journey together.</p>
                     </div>
                 </div>
             </div>
@@ -482,34 +480,17 @@
 
         <section id="contact">
             <div class="container">
-                <h3>Let's Connect!</h3>
-                <p>Ready to book your session or have a question? Fill out the form below!</p>
-                <div class="contact-form">
-                    <form action="#" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-
-                        <label for="phone">Phone (Optional):</label>
-                        <input type="text" id="phone" name="phone">
-
-                        <label for="service">Interested In:</label>
-                        <select id="service" name="service">
-                            <option value="portrait">Portraits</option>
-                            <option value="event">Events</option>
-                            <option value="branding">Personal Branding</option>
-                            <option value="couple">Engagements & Couples</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <br><br>
-
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-
-                        <input type="submit" value="Send Message">
-                    </form>
+                <h3>Ready to Transform?</h3>
+                <p>Reach out to schedule a consultation or learn more about how I can support your unique journey.</p>
+                <a href="mailto:your_email@example.com" class="btn">Send an Email</a>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <p>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <p>Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+                    </div>
+                    <!-- Add social media links if desired -->
                 </div>
             </div>
         </section>
@@ -517,13 +498,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Your Name Photography. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
+            <p>&copy; 2023 L. Logan. All rights reserved.</p>
         </div>
     </footer>
 </body>
