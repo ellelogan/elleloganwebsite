@@ -108,8 +108,7 @@
             max-width: 400px; /* SMALLER wordmark in hero */
             width: 100%;
             height: auto;
-            margin-top: 150px; /* Pushes the wordmark down ~1 inch */
-            margin-left: -50px; /* Pulls the wordmark left ~2 inches */
+            margin-top: 275px; /* Pushes the wordmark further down */
             margin-bottom: 25px;
             opacity: 0.6; /* Slightly less translucent */
         }
@@ -337,9 +336,9 @@
                 padding: 150px 20px 80px;
                 min-height: 500px;
             }
-            
+
             .hero-logo {
-                margin-left: -25px; /* Less extreme negative margin on smaller screens */
+                max-width: 350px;
             }
 
             #hero p {
@@ -377,7 +376,6 @@
 
         @media (max-width: 480px) {
             .hero-logo {
-                margin-left: 0; /* No negative margin on very small screens */
                 max-width: 280px;
             }
 
