@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name Photography - Capturing Your Moments</title>
+    <style>
+        /* Basic Reset & Body Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #fff;
+            color: #333;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin: 0;
+        }
+
+        header h1 a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #555;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #007bff; /* Accent color */
+        }
+
+        /* Hero Section */
+        #hero {
+            background: url('https://via.placeholder.com/1920x1080/007bff/ffffff?text=Your+Stunning+Hero+Image') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 150px 20px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 60px; /* Adjust for fixed header */
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Overlay for readability */
+        }
+
+        #hero .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        #hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background: #007bff; /* Accent color */
+            color: #fff;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #e9e9e9;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        /* Services */
+        #services .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+        }
+
+        .service-item i {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .service-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Gallery */
+        #gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        #gallery .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #gallery .gallery-item img {
+            width: 100%;
+            height: 250px; /* Fixed height for consistency */
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        #gallery .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Section */
+        #about .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: left;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        #about .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        #about .about-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        #about .about-text {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        #about .about-text h4 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        #about .about-text p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        #contact .contact-form {
+            max-width: 600px;
+            margin: 40px auto 0;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+
+        #contact .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        #contact .contact-form input[type="text"],
+        #contact .contact-form input[type="email"],
+        #contact .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        #contact .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        #contact .contact-form input[type="submit"] {
+            width: auto;
+            display: block;
+            margin-left: auto; /* Push button to the right */
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background 0.3s ease;
+        }
+
+        #contact .contact-form input[type="submit"]:hover {
+            background: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #007bff;
+        }
+
+        /* Font Awesome for icons */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                padding-left: 0;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+
+            #hero h2 {
+                font-size: 2.5rem;
+            }
+
+            #hero p {
+                font-size: 1.2rem;
+            }
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            #about .about-content {
+                flex-direction: column;
+            }
+
+            #about .about-image,
+            #about .about-text {
+                min-width: unset;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero {
+                padding: 100px 20px;
+            }
+
+            #hero h2 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+
+            nav ul li {
+                margin: 0 5px;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="#hero">Your Name Photography</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Capturing Your Moments, Beautifully.</h2>
+                <p>Specializing in portraits, events, and personal brand photography.</p>
+                <a href="#contact" class="btn">Book A Session</a>
+            </div>
+        </section>
+
+        <section id="services">
+            <div class="container">
+                <h3>Our Photography Services</h3>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <i class="fas fa-camera-retro"></i>
+                        <h4>Portraits</h4>
+                        <p>Beautiful individual and family portraits that truly reflect your personality and relationships.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-birthday-cake"></i>
+                        <h4>Events</h4>
+                        <p>Documenting your special occasions – birthdays, anniversaries, graduations, and corporate gatherings.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-briefcase"></i>
+                        <h4>Personal Branding</h4>
+                        <p>Professional headshots and lifestyle images to enhance your online presence and business.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-heart"></i>
+                        <h4>Engagements & Couples</h4>
+                        <p>Capturing the love and connection between partners in a relaxed and authentic way.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+                <h3>Our Work</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/FF5733/FFFFFF?text=Portrait+1" alt="Portrait Photography"></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/33FF57/FFFFFF?text=Event+Shot+1" alt="Event Photography"></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/3357FF/FFFFFF?text=Branding+Shot+1" alt="Branding Photography"></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/FFFF33/333333?text=Couple+Shot+1" alt="Couple Photography"></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/FF33FF/FFFFFF?text=Portrait+2" alt="Portrait Photography"></div>
+                    <div class="gallery-item"><img src="https://via.placeholder.com/400x400/33FFFF/333333?text=Event+Shot+2" alt="Event Photography"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h3>About Me</h3>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/500x600/777777/FFFFFF?text=Your+Headshot" alt="Your Name - Photographer">
+                    </div>
+                    <div class="about-text">
+                        <h4>Hi, I'm [Your Name]!</h4>
+                        <p>I'm a passionate photographer dedicated to freezing your most cherished moments in time. Based in [Your City/Region], I believe every person and every event has a unique story waiting to be told through stunning visuals.</p>
+                        <p>My approach is relaxed and natural, focusing on capturing genuine emotions and candid interactions. Whether it's the joy of a family gathering, the celebration of a milestone, or crafting the perfect image for your brand, I strive to create photographs that you'll treasure for a lifetime.</p>
+                        <p>Let's create something beautiful together!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h3>Let's Connect!</h3>
+                <p>Ready to book your session or have a question? Fill out the form below!</p>
+                <div class="contact-form">
+                    <form action="#" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="phone">Phone (Optional):</label>
+                        <input type="text" id="phone" name="phone">
+
+                        <label for="service">Interested In:</label>
+                        <select id="service" name="service">
+                            <option value="portrait">Portraits</option>
+                            <option value="event">Events</option>
+                            <option value="branding">Personal Branding</option>
+                            <option value="couple">Engagements & Couples</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <br><br>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+
+                        <input type="submit" value="Send Message">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Your Name Photography. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
