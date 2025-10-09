@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 1500px; /* EVEN WIDER page width */
+            max-width: 1500px; /* EXTRA WIDE page width */
             margin: 0 auto;
             padding: 20px;
         }
@@ -178,7 +178,7 @@
         /* Services Grid */
         #services .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* WIDER min-width for cards */
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* WIDER min-width for cards */
             gap: 30px;
             margin-top: 50px;
             text-align: left;
@@ -317,6 +317,13 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1450px) {
+            #services .service-grid {
+                grid-template-columns: 1fr; /* Stack cards on tablets if space is tight */
+                max-width: 600px;
+            }
+        }
+
         @media (max-width: 768px) {
             header .container {
                 flex-direction: column;
