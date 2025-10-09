@@ -156,9 +156,17 @@
             background: #3B5335; /* Dark Green */
             margin: 0 auto 100px;
         }
-
+        
         #hero + section::before {
              margin-bottom: 80px; /* Tighter spacing after hero */
+        }
+
+        #banner {
+            padding: 0; /* Remove padding for full bleed image */
+        }
+        
+        #banner::before, #contact::before {
+            display: none; /* Remove divider line before banner and contact sections */
         }
 
         section:nth-of-type(even) {
@@ -291,18 +299,25 @@
             line-height: 1.7;
         }
 
+        /* BANNER Section */
+        #banner {
+            background: url('https://i.imgur.com/jtK3ltT.jpeg') no-repeat center center/cover;
+            min-height: 500px;
+        }
+        
         /* Call to Action / Contact */
         #contact {
-            background-color: #fff;
-            color: #333;
+            background-color: #8B4513; /* Set to gold/brown */
+            color: #fff;
+            padding-top: 100px;
         }
 
         #contact h3 {
-            color: #333;
+            color: #fff;
         }
 
         #contact h3::after {
-            background-color: #8B4513;
+            background-color: #fff;
         }
 
         #contact p {
@@ -480,7 +495,7 @@
                 <h3>About Elle</h3>
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="https://ellelogan.zenfolio.com/img/s/v-12/u488034003-o880901765-53.jpg" alt="Elle Logan - Transformational Guide">
+                        <img src="https://i.imgur.com/wRyHCBG.jpeg" alt="Elle Logan - Transformational Guide">
                     </div>
                     <div class="about-text">
                         <h4>Empowering Voice, Illuminating Presence.</h4>
@@ -492,6 +507,10 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="banner">
+            <!-- This section is purely visual -->
         </section>
 
         <section id="contact">
