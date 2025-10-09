@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 1500px; /* EXTRA WIDE page width */
+            max-width: 1600px; /* EXTRA WIDE page width */
             margin: 0 auto;
             padding: 20px;
         }
@@ -178,11 +178,11 @@
         /* Services Grid */
         #services .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); /* WIDER min-width for cards */
+            grid-template-columns: repeat(3, 1fr); /* Force 3 equal columns */
             gap: 30px;
             margin-top: 50px;
             text-align: left;
-            max-width: 1500px; /* Matched to new container width for extra wide cards */
+            max-width: 1600px; 
             margin-left: auto;
             margin-right: auto;
         }
@@ -317,9 +317,9 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 1450px) {
+        @media (max-width: 1024px) {
             #services .service-grid {
-                grid-template-columns: 1fr; /* Stack cards on tablets if space is tight */
+                grid-template-columns: 1fr; /* Stack cards on tablets */
                 max-width: 600px;
             }
         }
